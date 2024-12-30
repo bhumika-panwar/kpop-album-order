@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Cart{% endblock %}
+{% block content %}
+<h1>Your Cart</h1>
+{% if cart %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>&#8377;{{ item.price }}</td>
+            <td>
+                <a href="{{ url_for('remove_from_cart', item_id=item.id) }}" class="btn btn-danger">Remove</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('shop_page') }}" class="btn btn-success">Add More</a>
+<h3>Total: &#8377;{{ total }}</h3>
+
+<!-- Redirect to Payment Page -->
+<a href="{{ url_for('payment') }}" class="btn btn-primary">Proceed to Payment</a>
+
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}

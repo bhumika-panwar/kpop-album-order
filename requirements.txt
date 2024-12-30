@@ -1,0 +1,6 @@
+flask 
+flask-sqlalchemy
+pandas
+werkzeug
+flask-login
+fpdf

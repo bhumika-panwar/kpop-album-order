@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Payment{% endblock %}
+
+{% block content %}
+<h1>Payment</h1>
+<p>Total Amount: ₹{{ total }}</p>
+<p>Choose your payment method:</p>
+
+<form method="POST">
+    <button type="submit" class="btn btn-primary">Cash on Delivery</button>
+</form>
+
+<p class="mt-3 text-muted">Payment will be collected at the time of delivery.</p>
+{% endblock %}

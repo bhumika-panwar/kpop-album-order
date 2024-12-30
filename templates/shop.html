@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Shop {% endblock %}
+{% block content %}
+<h1 class="text-center">Shop</h1>
+<div class="row">
+    {% for item in shop %}
+    <div class="col-md-3">
+        <div class="card-mb-4">
+            <img src="{{ url_for('static', filename=item.image) }}" class="card-img-top" alt="{{ item.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">Price:&#8377;{{ item.price }}</p>
+                <a href="{{ url_for('add_to_cart', item_id=item.id) }}"class="btn btn-success">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

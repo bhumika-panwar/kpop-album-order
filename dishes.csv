@@ -1,0 +1,11 @@
+id,name,price,image
+1,astronaut,4000,images/astronaut.jpg
+2,D-DAY,3500,images/D-DAY.jpg
+3,face,3000,images/face.jpg
+4,golden,3600,images/golden.jpg
+5,happy,3400,images/happy.jpg
+6,hope,4600,images/hope.jpg
+7,jack in the box,2600,images/jack_in_the_box.jpg
+8,layover,3800,images/layover.jpg
+9,muse,4700,images/muse.jpg
+10,rpwp,3400,images/rpwp.jpg

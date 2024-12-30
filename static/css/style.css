@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(135deg, #f8bbd0, #f48fb1);  /* Light pink gradient */
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;  /* Set a custom font */
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.btn-primary {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    background-color: #c2185b; /* Darker pink */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: fadeIn 2s ease-in-out;  /* Fade-in effect for h1 */
+}
+
